@@ -28,26 +28,30 @@ const movies = [{
 // Part 1
 
 function findMovies(movieTitle) {
-    for (let movie of movies) {
-        if (movieTitle == movie.title){
-            console.log(`This movie ${movie.title} was directed by ${movie.director} in year ${movie.year}.`);
+    for (let i of movies) {
+        if (movieTitle == i.title){
+            console.log(`This movie ${i.title} was directed by ${i.director} in year ${i.year}.`);
         } else {
             console.log(`${movieTitle} wasn't found.`);
         }
-        console.log(movie);
+        // console.log(i);
     }
+    // console.log(i); // this is out of scope, throwing an error
 }
 
 let findStarWars = findMovies("Star Wars");
 // part 6.
-// console.log(movie); // this should throw an error! // same for part 7 // undifined for part 10
+// console.log(movie); // this should throw an error! // same for part 7 // undefined for part 10 due to hoisting
 // console.log(findStarWars); // undefined
 
 //part 7.
 let movie = "Thor: Ragnorok"
 //part 10.
 //var movie = "Thor: Ragnorok"
-//part 8.
-console.log(movie);
 
+//part 8.
+// console.log(movie);
+
+// part 12.
+findMovies(movie);
 
